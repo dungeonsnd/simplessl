@@ -12,7 +12,7 @@ import javax.crypto.Cipher;
 //import sun.misc.BASE64Decoder;
 //import sun.misc.BASE64Encoder;
 //import org.bouncycastle.util.encoders.Hex;
-public class RSACoderSimple {
+public class RSAWrapper {
  
     public static String byte2hex(byte[] b) {
         String hs = ""; 

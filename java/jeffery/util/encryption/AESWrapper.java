@@ -5,7 +5,7 @@ import javax.crypto.spec.SecretKeySpec;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
-public class AESDemo {
+public class AESWrapper {
 //	protected static String hexStr =new String("01020304050607080900010203040506");
 	protected static String hexStr =new String("01010101010101010101010101010101");
 
@@ -71,15 +71,15 @@ public class AESDemo {
 
     public static void main(String[] args) throws Exception {
     	
-        String Code = "1234567890ÄãºÃ";
+        String Code = "1234567890ä½ å¥½";
         String key = "1234567890123456";
         String codE;
         
-        codE = AESDemo.encrypt(key, Code);
+        codE = AESWrapper.encrypt(key, Code);
 
         System.out.println("Plaintext:" + Code);
-        System.out.println("ÃÜÔ¿£º" + key);
+        System.out.println("å¯†é’¥ï¼š" + key);
         System.out.println("Ciphertext:" + codE);
-        System.out.println("Decrypted:" + AESDemo.decrypt(key, codE));
+        System.out.println("Decrypted:" + AESWrapper.decrypt(key, codE));
     }
 }
