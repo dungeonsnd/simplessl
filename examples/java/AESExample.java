@@ -5,7 +5,7 @@ import javax.crypto.spec.SecretKeySpec;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
-public class AESWrapper {
+public class AESExample {
 //	protected static String hexStr =new String("01020304050607080900010203040506");
 	protected static String hexStr =new String("01010101010101010101010101010101");
 
@@ -32,6 +32,7 @@ public class AESWrapper {
                 
         SecretKeySpec skeySpec = new SecretKeySpec(strKey.getBytes(), "AES");
         System.out.print("key=0x");
+        printHexString(arrA);
 
         String ivString =hexStr;
         System.out.println("ivString=0x"+ivString);        
@@ -74,11 +75,11 @@ public class AESWrapper {
         String key = "1234567890123456";
         String codE;
         
-        codE = AESWrapper.encrypt(key, Code);
+        codE = AESExample.encrypt(key, Code);
 
         System.out.println("Plaintext:" + Code);
         System.out.println("密钥：" + key);
         System.out.println("Ciphertext:" + codE);
-        System.out.println("Decrypted:" + AESWrapper.decrypt(key, codE));
+        System.out.println("Decrypted:" + AESExample.decrypt(key, codE));
     }
 }

@@ -1,11 +1,5 @@
-import javax.crypto.Cipher;
-import javax.crypto.spec.IvParameterSpec;
-import javax.crypto.spec.SecretKeySpec;
 
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
-
-public class AESWrapper {
+public class Hex2String {
 //	protected static String hexStr =new String("01020304050607080900010203040506");
 	protected static String hexStr =new String("01010101010101010101010101010101");
 
@@ -74,11 +68,11 @@ public class AESWrapper {
         String key = "1234567890123456";
         String codE;
         
-        codE = AESWrapper.encrypt(key, Code);
+        codE = Hex2String.encrypt(key, Code);
 
         System.out.println("Plaintext:" + Code);
         System.out.println("密钥：" + key);
         System.out.println("Ciphertext:" + codE);
-        System.out.println("Decrypted:" + AESWrapper.decrypt(key, codE));
+        System.out.println("Decrypted:" + Hex2String.decrypt(key, codE));
     }
 }
